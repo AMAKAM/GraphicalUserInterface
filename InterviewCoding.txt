@@ -1,0 +1,35 @@
+           Based on the interview that we had last week, I have decided to proceed to  the next step. Next step in the interview process is a task that you need to complete, once you have completed the task please email me to setup an appointment so that you can then explain how you came up with the solution and why you took a particular approach vs other approaches. Below are the details for the task that you need to complete before next Wednesday.
+
+Please follow the instructions and use the attached source code to complete your task and meet with me after you complete your tasks and be prepared to explain how you did things.
+
+Attached zip contains JAVA project files of a system called RODS (there are two other zip files inside the downloaded file). Please download and open the Zip files in two separate folders.
+ 
+In one folder there is the project files for the RODS system that includes a component Called CoCo or “Complaint Coder”.
+ 
+CoCo receives two inputs:
+            A: Complaints of a patient in form of a text string: (e.g., “fever and cough, can not breath”)
+            B: A File Name. The file contains a table of probabilities of a certain syndrome (disease), based on having any of the known complaints (e.g., Respiratory,cough,0.100508; Constitutional,cough,fever,0.117647) 
+ 
+CoCo does find the most probable disease for the patient, based on his complaints and returns a string as return value, which is the most probable Syndrome (disease) for that patient. For example:
+            Input:    “fever and cough, can not breath”, probability_default.txt
+Output: “Respiratory Syndrome”
+ 
+Coco uses a Bayesian algorithm to do this but we are not interested in that for this test.
+ 
+Coco has 2 methods to do this:
+ 
+A: Bach()
+Rather than a string parameter for the complaints, this receives a file name that contains the list of complaints of many patients. It writes back the disease of each patient into another file. [we are not interested in this function either]
+ 
+            B: Line()
+Returns the syndrome (disease) of a patient to the system output. This is the method that I briefly introduced in the beginning.
+ 
+You can find further detail about CoCo on the CoCo_Batch.JAVA file and on the web if you google for “CoCo and RODS”. I have also attached another Zip file (CoCo) that has a copy of the probability files and some samples that you can play with through command line to see how it works.
+ 
+Now the test is:
+ Using the evaluation version of JBuilder downloadable from their website (if you don’t already have a JAVA IDE):
+1-    Isolate the CoCo_Batch.JAVA file in another new project file, with all other files that it may need to properly function. Name the project as “YOURNAME_CoCo”.
+2-     Create appropriate GUI interface to call Line() method and send complaints from interface and receive and display the results in the display rather than System output.
+3-   Modify CoCo class to load the probabilities file when you instantiate it, so that the filename can be erased from arguments list of the Line() method.
+      4-  Package the application so that I can download and run it on my system
+5-   (Optional: 25+ score from total 50)  Explain the CoCo’s design and how it really works
